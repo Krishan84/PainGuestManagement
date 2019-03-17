@@ -14,6 +14,18 @@ namespace PainGuestApplication.Model
 
         }
 
+        public UserIdentityDbContext()
+        {
+            Database.EnsureCreated();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"localhost\\SQLEXPRESS01;Database=PenGuestManagement;Trusted_Connection=True;MultipleActiveResultSets=true;");
+            }
+        }
         public DbSet<AccessLog> AccessLogs { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<B2BAccount> B2BAccounts { get; set; }

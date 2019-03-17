@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace PainGuestApplication.Model
@@ -11,9 +12,14 @@ namespace PainGuestApplication.Model
             ID = Guid.NewGuid().ToString();
         }
         public string ID { get; set; }
+        [Required]
+        [StringLength(255)]
         public string BankName { get; set; }
+        [Required]
         public string AccountNumber { get; set; }
+        [Required]
         public string RoutingNumber { get; set; }
+        [Required]
         public bool Active { get; set; }
         public DateTime DateCreated { get; set; }
         public string UserID { get; set; }

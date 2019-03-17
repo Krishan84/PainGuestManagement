@@ -10,6 +10,7 @@ namespace PainGuestApplication.Model.EFConfig
     {
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
+            builder.HasOne(a => a.B2BAccount).WithMany(b=>b.Users);
             builder.HasOne(a => a.Language).WithMany(b => b.Users);
             builder.HasIndex(a => a.B2CObjectId).IsUnique();
         }

@@ -7,7 +7,7 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
-
+<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
   </PropertyGroup>
@@ -24,8 +24,20 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="PainGuestApplication.Data.Contracts\**" />
+    <Compile Remove="PainGuestApplication.Model\**" />
+    <Compile Remove="PainGuestApplication.Utility\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="PainGuestApplication.Data.Contracts\**" />
+    <Content Remove="PainGuestApplication.Model\**" />
+    <Content Remove="PainGuestApplication.Utility\**" />
+    <EmbeddedResource Remove="PainGuestApplication.Data.Contracts\**" />
+    <EmbeddedResource Remove="PainGuestApplication.Model\**" />
+    <EmbeddedResource Remove="PainGuestApplication.Utility\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="PainGuestApplication.Data.Contracts\**" />
+    <None Remove="PainGuestApplication.Model\**" />
+    <None Remove="PainGuestApplication.Utility\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
   <ItemGroup>
