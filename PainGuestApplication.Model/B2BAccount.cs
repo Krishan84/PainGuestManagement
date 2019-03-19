@@ -15,7 +15,6 @@ namespace PainGuestApplication.Model
         [Required]
         [StringLength(255)]
         public string GuestHouseName { get; set; }
-        [Required]
         public string PrimaryContactUserID { get; set; }
         [Required]
         public string Phone { get; set; }
@@ -36,7 +35,6 @@ namespace PainGuestApplication.Model
         public bool Active { get; set; }
         [Required]
         public bool LoginEnabled { get; set; }
-        [Required]
         public string LanguageID { get; set; }
         public virtual Language Language { get; set; }
         
@@ -46,7 +44,6 @@ namespace PainGuestApplication.Model
         public virtual ApplicationUser BrokerUser { get; set; }
         [Required]
         public DateTime CreatedOn { get; set; }
-        [Required]
         public string CreatedByUserID { get; set; }
         public virtual ApplicationUser CreatedByUser { get; set; }
         public DateTime UpdatedOn { get; set; }

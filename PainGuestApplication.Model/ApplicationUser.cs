@@ -54,7 +54,6 @@ namespace PainGuestApplication.Model
         public RegistrationStatus RegistrationStatus { get; set; }
         [Required]
         public UserType Usertype { get; set; }
-        [Required]
         public string LanguageID { get; set; }
         public virtual Language Language { get; set; }
         public string B2BAccountID { get; set; }

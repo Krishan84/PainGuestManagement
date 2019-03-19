@@ -13,7 +13,6 @@ namespace PainGuestApplication.Model
         public string ReviewComment { get; set; }
         [Required]
         public int ReviewerRating { get; set; }
-        [Required]
         public string ReviewerID { get; set; }
         public virtual ApplicationUser Reviewer { get; set; }
         public string B2BAccountID { get; set; }

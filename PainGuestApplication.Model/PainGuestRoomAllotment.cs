@@ -12,10 +12,8 @@ namespace PainGuestApplication.Model
         {
             ID = Guid.NewGuid().ToString();
         }
-        [Required]
         public string B2BAccountRoomID { get; set; }
         public virtual B2BAccountRoom B2BAccountRoom { get; set; }
-        [Required]
         public string PainGuestAgreementID { get; set; }
         public virtual PainGuestAgreement PainGuestAgreement { get; set; }
         [Required]
@@ -24,7 +22,6 @@ namespace PainGuestApplication.Model
         public DateTime DateOfAllotment { get; set; }
         [Required]
         public DateTime CreatedOn { get; set; }
-        [Required]
         public string CreatedByUserID { get; set; }
         public virtual ApplicationUser CreatedByUser { get; set; }
     }

@@ -4,6 +4,14 @@ using System.Text;
 
 namespace PainGuestApplication.Model.DTO
 {
+
+    public class B2BAccountDTO
+    {
+        public B2BAccountDTO(B2BAccount model)
+        {
+
+        }
+    }
     public class EnrollmentDTO
     {
     }

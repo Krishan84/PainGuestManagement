@@ -17,7 +17,6 @@ namespace PainGuestApplication.Model
         [Required]
         public DateTime CreatedOn { get; set; }
         public DateTime? UpdatedOn { get; set; }
-        [Required]
         public string CreatedByUserID { get; set; }
         public virtual ApplicationUser CreatedByUser { get; set; }
         public string UpdatedByUserID { get; set; }
@@ -28,7 +27,6 @@ namespace PainGuestApplication.Model
         public bool IsVerandaAvailable { get; set; }
         [Required]
         public int MonthlyAmount { get; set; }
-        [Required]
         public string B2BAccountID { get; set; }
         public virtual B2BAccount B2BAccount { get; set; }
         public string PainGuestUserID { get; set; }

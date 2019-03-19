@@ -13,10 +13,8 @@ namespace PainGuestApplication.Model
         {
             ID = Guid.NewGuid().ToString();
         }
-        [Required]
         public string PainGuestID { get; set; }
         public virtual ApplicationUser PainGuest { get; set; }
-        [Required]
         public string B2BAccountRoomID { get; set; }
         public virtual B2BAccountRoom B2BAccountRoom { get; set; }
         [Required]
@@ -25,7 +23,6 @@ namespace PainGuestApplication.Model
         public UnitType Unit { get; set; }
         [Required]
         public string TransactionReferenceNumber { get; set; }
-        [Required]
         public string CreatedByUserID { get; set; }
         public virtual ApplicationUser CreatedByUser { get; set; }
         [Required]
